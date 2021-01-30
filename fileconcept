@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    FILE *fp;
+    fp=fopen("output.c","w");
+    char s1[100],s2[100];
+    int i,j=0;
+     printf("Enter a string: ");
+	scanf("%s",s1);
+    for(i=(strlen(s1)-1); i>=0;i--)
+        s2[j++]=s1[i];
+    fprintf(fp,"Original String is: %s",s1);
+    fprintf(fp,"\nReversed String is: %s",s2);
+    fclose(fp);
+    return 0;
+}
